@@ -48,7 +48,9 @@ $floated-block-name: unquote('Block');
 
     @include draggable-source-layout($floated-block-name, 4) {
       .BlockContent {
-        height: rows(6);
+        // suddenly breaking in Chrome...
+        // subtrack a single pixel to fix the issue
+        height: rows(6) - 0.1rem;
       }
     }
 

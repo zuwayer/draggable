@@ -61,9 +61,6 @@ export default function DragEvents() {
   });
 
   draggable.on('drag:move', (evt) => {
-    // Required to help restrict the draggable element to the container
-    evt.cancel();
-
     // We do not want to use `getBoundingClientRect` while dragging,
     // as that would be very expensive.
     // Instead, we look at the mouse position, which we can ballpark as being
